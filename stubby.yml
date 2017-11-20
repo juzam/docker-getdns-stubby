@@ -1,0 +1,14 @@
+listen_addresses:
+#  -  127.0.0.1@8053
+  - 0::1@8053
+# https://github.com/getdnsapi/getdns/issues/358
+
+dns_transport_list:
+  - GETDNS_TRANSPORT_TLS
+
+upstream_recursive_servers:
+# Quad9
+   - address_data: 9.9.9.9
+     tls_auth_name: "dns.quad9.net"
+   - address_data: 2620:fe::fe
+     tls_auth_name: "dns.quad9.net"
