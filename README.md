@@ -18,3 +18,7 @@ This image will not get you a caching dns, just the dns over tls via Quad9 with 
 ## run with your own stubby config
 
 You can of course change the included config file and write your own from scratch, to test Stubby with your own configuration. You are not limited to Quad9. 
+
+# Official Getdns Dockerfile
+
+Getdns includes an official and more complete [Dockerfile](https://github.com/getdnsapi/getdns/blob/master/src/tools/Dockerfile) maintained by [Melinda Shore](https://github.com/MelindaShore)
