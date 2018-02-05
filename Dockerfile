@@ -12,7 +12,7 @@ WORKDIR getdns
 
 RUN git checkout develop && git submodule update --init && libtoolize -ci && autoreconf -fi && mkdir build
 WORKDIR build
-RUN ../configure --without-libidn --enable-stub-only --with-stubby && make && make install && ldconfig
+RUN ../configure --without-libidn --without-libidn2 --enable-stub-only --with-stubby && make && make install && ldconfig
 
 COPY stubby.yml /usr/local/etc/stubby/stubby.yml
 
