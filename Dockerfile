@@ -1,5 +1,4 @@
-#FROM armhf/debian:stretch
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER "Giovanni Angoli <juzam76@gmail.com>"
 
 RUN apt-get update && apt-get install -y libyaml-dev libssl-dev libtool-bin autoconf git make && \
