@@ -9,7 +9,7 @@ RUN git clone https://github.com/getdnsapi/getdns.git
 
 WORKDIR getdns
 
-RUN git checkout develop && git submodule update --init && libtoolize -ci && autoreconf -fi && mkdir build
+RUN git checkout master && git submodule update --init && libtoolize -ci && autoreconf -fi && mkdir build
 WORKDIR build
 RUN ../configure --without-libidn --without-libidn2 --enable-stub-only --with-stubby && make && make install && ldconfig
 
